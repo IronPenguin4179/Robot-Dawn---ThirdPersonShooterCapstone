@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdPersonShooterCapstone", "Assembly-CSharp-firstpass.csproj", "{FC0BCF12-6ADB-3311-3509-CA8FF3C234B6}"
 EndProject
+Project("{D0875B4D-9DC6-CBF6-4A83-96B33C2CEC69}") = "ThirdPersonShooterCapstone", "Assembly-UnityScript.unityproj", "{BC84DA18-28A6-2484-F1E0-030B7491B296}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdPersonShooterCapstone", "Assembly-CSharp.csproj", "{23FCD70B-D580-D7C5-07D4-8EE0EDCFDA5C}"
+EndProject
+Project("{D0875B4D-9DC6-CBF6-4A83-96B33C2CEC69}") = "ThirdPersonShooterCapstone", "Assembly-UnityScript-firstpass.unityproj", "{19283A1E-C14C-1791-4D5A-4FF75DFCD11C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdPersonShooterCapstone", "Assembly-CSharp-Editor.csproj", "{4820417C-F68B-0C55-BDE4-4111218DF9DB}"
 EndProject
@@ -17,10 +21,18 @@ Global
 		{FC0BCF12-6ADB-3311-3509-CA8FF3C234B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC0BCF12-6ADB-3311-3509-CA8FF3C234B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC0BCF12-6ADB-3311-3509-CA8FF3C234B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC84DA18-28A6-2484-F1E0-030B7491B296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC84DA18-28A6-2484-F1E0-030B7491B296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC84DA18-28A6-2484-F1E0-030B7491B296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC84DA18-28A6-2484-F1E0-030B7491B296}.Release|Any CPU.Build.0 = Release|Any CPU
 		{23FCD70B-D580-D7C5-07D4-8EE0EDCFDA5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{23FCD70B-D580-D7C5-07D4-8EE0EDCFDA5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23FCD70B-D580-D7C5-07D4-8EE0EDCFDA5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23FCD70B-D580-D7C5-07D4-8EE0EDCFDA5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19283A1E-C14C-1791-4D5A-4FF75DFCD11C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19283A1E-C14C-1791-4D5A-4FF75DFCD11C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19283A1E-C14C-1791-4D5A-4FF75DFCD11C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19283A1E-C14C-1791-4D5A-4FF75DFCD11C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4820417C-F68B-0C55-BDE4-4111218DF9DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4820417C-F68B-0C55-BDE4-4111218DF9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4820417C-F68B-0C55-BDE4-4111218DF9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
