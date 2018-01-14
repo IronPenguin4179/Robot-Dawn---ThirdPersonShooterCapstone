@@ -5,11 +5,10 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 6f;
 
     Vector3 movement;
-	Vector3 factor;
     //Animator anim;
     Rigidbody playerRigidbody;
     int floorMask;
-    float camRayLength = 100f;
+    float camRayLength = 500f;
 
     void Awake()
     {

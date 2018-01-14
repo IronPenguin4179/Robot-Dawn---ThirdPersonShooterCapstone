@@ -12,7 +12,7 @@ public class EnemyHealth : MonoBehaviour
     //Animator anim;
     AudioSource enemyAudio;
     ParticleSystem hitParticles;
-    BoxCollider boxCollider;
+    CapsuleCollider capsuleCollider;
     bool isDead;
     bool isSinking;
 
@@ -22,7 +22,7 @@ public class EnemyHealth : MonoBehaviour
         //anim = GetComponent <Animator> ();
         enemyAudio = GetComponent <AudioSource> ();
         hitParticles = GetComponentInChildren <ParticleSystem> ();
-        boxCollider = GetComponent <BoxCollider> ();
+        capsuleCollider = GetComponent <CapsuleCollider> ();
 
         currentHealth = startingHealth;
     }
@@ -46,8 +46,8 @@ public class EnemyHealth : MonoBehaviour
 
         currentHealth -= amount;
             
-        hitParticles.transform.position = hitPoint;
-        hitParticles.Play();
+        //hitParticles.transform.position = hitPoint;
+        //hitParticles.Play();
 
         if(currentHealth <= 0)
         {
@@ -60,7 +60,7 @@ public class EnemyHealth : MonoBehaviour
     {
         isDead = true;
 
-        boxCollider.isTrigger = true;
+        capsuleCollider.isTrigger = true;
 
         //anim.SetTrigger ("Dead");
 
@@ -74,7 +74,7 @@ public class EnemyHealth : MonoBehaviour
         GetComponent <UnityEngine.AI.NavMeshAgent> ().enabled = false;
         GetComponent <Rigidbody> ().isKinematic = true;
         isSinking = true;
-        //ScoreManager.score += scoreValue;
+        ScoreManager.score += scoreValue;
         Destroy (gameObject, 2f);
     }
 }
