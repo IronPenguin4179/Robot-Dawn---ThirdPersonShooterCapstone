@@ -6,11 +6,12 @@ public class PlayerHealth : MonoBehaviour
 {
     public int startingHealth = 100;                            // The amount of health the player starts the game with.
     public int currentHealth;                                   // The current health the player has.
-    public Slider healthSlider;                                 // Reference to the UI's health bar.
+	public float sinkSpeed = 5f;
+	public Slider healthSlider;                                 // Reference to the UI's health bar.
     public Image damageImage;                                   // Reference to an image to flash on the screen on being hurt.
     public AudioClip deathClip;                                 // The audio clip to play when the player dies.
     public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
-    public Color flashColour = new Color(1f, 0f, 0f, 0.2f);     // The colour the damageImage is set to, to flash.
+    public Color flashColour = new Color(1f, 0f, 0f, 0.3f);     // The colour the damageImage is set to, to flash.
 
 
     //Animator anim;                                              // Reference to the Animator component.
@@ -19,6 +20,8 @@ public class PlayerHealth : MonoBehaviour
     PlayerShooting playerShooting;                              // Reference to the PlayerShooting script.
     bool isDead;                                                // Whether the player is dead.
     bool damaged;                                               // True when the player gets damaged.
+	bool isSinking;
+
 
 
     void Awake()
@@ -51,6 +54,11 @@ public class PlayerHealth : MonoBehaviour
 
         // Reset the damaged flag.
         damaged = false;
+
+		if(isSinking)
+		{
+			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
+		}
     }
 
 
@@ -95,5 +103,15 @@ public class PlayerHealth : MonoBehaviour
         // Turn off the movement and shooting scripts.
         playerMovement.enabled = false;
         playerShooting.enabled = false;
+		StartSinking ();
     }
+
+	public void StartSinking ()
+	{
+		GetComponent <PlayerMovement> ().enabled = false;
+		GetComponent <Rigidbody> ().isKinematic = true;
+		playerShooting.enabled = false;
+		isSinking = true;
+		Destroy (gameObject, 2f);
+	}
 }
